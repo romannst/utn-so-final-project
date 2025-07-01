@@ -1,7 +1,7 @@
 {
   "name": "student-backend",
   "description": "Backend service for managing student data",
-  "author": "<your name>",
+  "author": "romannst",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
