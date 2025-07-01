@@ -9,3 +9,13 @@ document.getElementById("loadButton").addEventListener("click", async () => {
     tbody.appendChild(row);
   });
 });
+document.getElementById("btnSaludo").addEventListener("click", async () => {
+  const nombre = document.getElementById("nombreInput").value;
+  if (!nombre) {
+    alert("Por favor, ingresa tu nombre.");
+    return;
+  }
+  const response = await fetch(`/api/greet/${encodeURIComponent(nombre)}`);
+  const data = await response.json();
+  document.getElementById("nombreUsuario").innerText = data.message;
+});

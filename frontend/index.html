@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Estudiantes</title>
-    <link rel="stylesheet" href="styles_modern.css" />
+    <link rel="stylesheet" href="styles_modern.css"/>
   </head>
   <body>
     <h1>Lista de Estudiantes</h1>
@@ -17,8 +17,11 @@
       </thead>
       <tbody></tbody>
     </table>
-    <input type="text" id="nombreInput" placeholder="Escribi tu nombre" />
-    <button id="btnSaludo">Saludarme</button>
+    <div style="display: flex; flex-direction: column; align-items: center; padding-top: 1rem;">
+      <input style="padding: .5rem;" type="text" id="nombreInput" placeholder="Escribí tu nombre"/>
+      <button id="btnSaludo">Saludarme</button>
+      <p id="nombreUsuario"></p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
