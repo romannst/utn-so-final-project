@@ -41,13 +41,13 @@ d) Obliga a usar siempre la misma versión de Node.js
 
 ### **💡 Verdadero o Falso**
 
-**1️⃣ Los contenedores Docker comparten el kernel de la máquina host.** VERDADERO??
+**1️⃣ Los contenedores Docker comparten el kernel de la máquina host.** VERDADERO
 
 **2️⃣ Solo puedes ejecutar un contenedor a la vez usando Docker.** FALSO
 
-**3️⃣ En un `docker-compose.yml`, la etiqueta `depends_on` asegura que un servicio se inicie antes que otro.**
+**3️⃣ En un `docker-compose.yml`, la etiqueta `depends_on` asegura que un servicio se inicie antes que otro.** VERDADERO
 
-**4️⃣ Los contenedores creados a partir de la misma imagen siempre tendrán los mismos datos dentro por defecto.**
+**4️⃣ Los contenedores creados a partir de la misma imagen siempre tendrán los mismos datos dentro por defecto.** FALSO
 
 **5️⃣ Nginx puede usarse en un contenedor Docker para servir archivos estáticos del frontend y hacer proxy inverso de peticiones a la API.** VERDADERO
 
@@ -56,11 +56,31 @@ d) Obliga a usar siempre la misma versión de Node.js
 ### **✍️ Respuesta Corta**
 
 **1️⃣ ¿Cuál es la diferencia entre un contenedor y una imagen en Docker?**
+    En Docker, un contenedor de Docker es una aplicación o un servicio de software autónomo y ejecutable, mientras que una
+    imagen es la plantilla que se carga en el contenedor para ejecutarse, como un conjunto de instrucciones.
 
 **2️⃣ ¿Para qué se utilizan volúmenes en Docker?**
+    En Docker, los volúmenes se utilizan para almacenar datos de forma persistente y compartirlos entre contenedores, incluso si
+    se eliminan o actualizan los contenedores. Son la forma recomendada de gestionar datos persistentes en Docker, ya que permiten
+    que los datos sobrevivan al ciclo de vida de los contenedores.
+    El propósito de utilizar volúmenes Docker es conservar datos fuera del contenedor para poder realizar copias de seguridad o compartirlos.
+    El uso de volúmenes en Docker es la forma recomendada para garantizar la persistencia de la información, incluso tras eliminar los contenedores.
 
 **3️⃣ ¿Qué hace la instrucción `EXPOSE` en un Dockerfile?**
+    La instrucción EXPOSE expone un puerto específico con un protocolo específico dentro de un contenedor Docker.
+    La instrucción EXPOSE en un Dockerfile indica a Docker que un contenedor escucha el tráfico en el puerto especificado.
+    La instrucción EXPOSE en un Dockerfile especifica los puertos que escucha el contenedor en tiempo de ejecución.
 
 **4️⃣ Escribe un beneficio de usar Docker en tus proyectos.**
+    Una de las ventajas claras de Docker son su ligereza —al no virtualizar un sistema completo el consumo de recursos es mínimo, ahorrando
+    alrededor de un 80% de dichos recursos—, la portabilidad y su autosuficiencia, pues Docker se encarga de la gestión del contenedor y de
+    las aplicaciones que contenga.
+    El principal beneficio de usar Docker en un proyecto es la consistencia del entorno de desarrollo y ejecución. Docker permite empaquetar
+    una aplicación y sus dependencias en un contenedor, asegurando que se ejecute de la misma manera en diferentes entornos (desarrollo, pruebas,
+    producción), eliminando el problema de "funciona en mi máquina".
 
 **5️⃣ ¿Cuál es el propósito de usar Nginx en tu proyecto Docker?**
+    Se utiliza Nginx en un proyecto Docker, porque es un servidor web de alto rendimiento que se utiliza a menudo como proxy inverso, balanceador
+    de carga y caché de contenido.
+    Nginx se utiliza comúnmente en proyectos Docker por su capacidad para servir contenido web de manera eficiente, actuar como proxy
+    inverso, equilibrar carga y proporcionar seguridad, especialmente en aplicaciones web a gran escala.
