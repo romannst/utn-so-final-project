@@ -14,6 +14,19 @@ app.get("/greet", (req, res) => {
   const name = req.query.name;
   res.json({ message: `¡Hola, ${name}!` });
 });
+//students
+app.get("/students", (req, res) => {
+  const name = req.query.name;
+  if (!name) {
+    return res.status(400).json({ error: "Name query parameter is required" });
+  }
+  db.query("INSERT INTO students (name) VALUES ($1) RETURNING *", [name])
+    .then(result => res.json(result.rows[0]))
+    .catch(err => {
+      console.error(err);
+      res.status(500).send("DB error");
+    });
+});
 app.get("/api/students", async (req, res) => {
   try {
     const result = await db.query("SELECT * FROM students");

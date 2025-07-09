@@ -19,3 +19,13 @@ document.getElementById("btnSaludo").addEventListener("click", async () => {
   const data = await response.json();
   document.getElementById("nombreUsuario").innerText = data.message;
 });
+document.getElementById("btnEstudiante").addEventListener("click", async () => {
+  const nombreEstudiante = document.getElementById("nombreEstudiante").value;
+  if (!nombreEstudiante) {
+    alert("Por favor, ingresa el nombre del estudiante.");
+    return;
+  }
+  const response = await fetch(`/students?name=${encodeURIComponent(nombreEstudiante)}`);
+  const data = await response.json();
+  document.getElementById("nuevoEstudiante").innerText = data.name;
+});
