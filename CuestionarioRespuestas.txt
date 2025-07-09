@@ -63,24 +63,13 @@ d) Obliga a usar siempre la misma versión de Node.js
     En Docker, los volúmenes se utilizan para almacenar datos de forma persistente y compartirlos entre contenedores, incluso si
     se eliminan o actualizan los contenedores. Son la forma recomendada de gestionar datos persistentes en Docker, ya que permiten
     que los datos sobrevivan al ciclo de vida de los contenedores.
-    El propósito de utilizar volúmenes Docker es conservar datos fuera del contenedor para poder realizar copias de seguridad o compartirlos.
-    El uso de volúmenes en Docker es la forma recomendada para garantizar la persistencia de la información, incluso tras eliminar los contenedores.
 
 **3️⃣ ¿Qué hace la instrucción `EXPOSE` en un Dockerfile?**
-    La instrucción EXPOSE expone un puerto específico con un protocolo específico dentro de un contenedor Docker.
-    La instrucción EXPOSE en un Dockerfile indica a Docker que un contenedor escucha el tráfico en el puerto especificado.
     La instrucción EXPOSE en un Dockerfile especifica los puertos que escucha el contenedor en tiempo de ejecución.
 
 **4️⃣ Escribe un beneficio de usar Docker en tus proyectos.**
-    Una de las ventajas claras de Docker son su ligereza —al no virtualizar un sistema completo el consumo de recursos es mínimo, ahorrando
-    alrededor de un 80% de dichos recursos—, la portabilidad y su autosuficiencia, pues Docker se encarga de la gestión del contenedor y de
-    las aplicaciones que contenga.
-    El principal beneficio de usar Docker en un proyecto es la consistencia del entorno de desarrollo y ejecución. Docker permite empaquetar
-    una aplicación y sus dependencias en un contenedor, asegurando que se ejecute de la misma manera en diferentes entornos (desarrollo, pruebas,
-    producción), eliminando el problema de "funciona en mi máquina".
+    El principal beneficio de usar Docker en un proyecto es la consistencia entre desarrollo, pruebas y producción. El mismo te permite empaquetar
+    una aplicación y sus dependencias en un contenedor, asegurando que se ejecute de la misma manera en diferentes entornos.
 
 **5️⃣ ¿Cuál es el propósito de usar Nginx en tu proyecto Docker?**
-    Se utiliza Nginx en un proyecto Docker, porque es un servidor web de alto rendimiento que se utiliza a menudo como proxy inverso, balanceador
-    de carga y caché de contenido.
-    Nginx se utiliza comúnmente en proyectos Docker por su capacidad para servir contenido web de manera eficiente, actuar como proxy
-    inverso, equilibrar carga y proporcionar seguridad, especialmente en aplicaciones web a gran escala.
+    Nginx se utiliza en proyectos Docker para servir archivos estáticos, actuar como proxy inverso y balanceador de carga.
