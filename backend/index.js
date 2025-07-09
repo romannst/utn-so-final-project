@@ -11,6 +11,9 @@ app.use(express.json());
 // Routes
 app.get("/api/ping", (req, res) => res.json({ message: "pong" }));
 app.get("/greet", (req, res) => {
+  if (!req.query.name) {
+    return res.status(400).json({ error: "Name query parameter is required" });
+  }
   const name = req.query.name;
   res.json({ message: `¡Hola, ${name}!` });
 });
