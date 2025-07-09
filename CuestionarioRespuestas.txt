@@ -56,12 +56,12 @@ d) Obliga a usar siempre la misma versión de Node.js
 ### **✍️ Respuesta Corta**
 
 **1️⃣ ¿Cuál es la diferencia entre un contenedor y una imagen en Docker?**
-    En Docker, un contenedor de Docker es una aplicación o un servicio de software autónomo y ejecutable, mientras que una
+    En Docker, un contenedor es una aplicación o un servicio de software autónomo y ejecutable, mientras que una
     imagen es la plantilla que se carga en el contenedor para ejecutarse, como un conjunto de instrucciones.
 
 **2️⃣ ¿Para qué se utilizan volúmenes en Docker?**
     En Docker, los volúmenes se utilizan para almacenar datos de forma persistente y compartirlos entre contenedores, incluso si
-    se eliminan o actualizan los contenedores. Son la forma recomendada de gestionar datos persistentes en Docker, ya que permiten
+    se eliminan o actualizan los contenedores. Son la forma recomendada de gestionar datos persistentes, ya que permiten
     que los datos sobrevivan al ciclo de vida de los contenedores.
 
 **3️⃣ ¿Qué hace la instrucción `EXPOSE` en un Dockerfile?**
