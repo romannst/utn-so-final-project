@@ -15,7 +15,7 @@ document.getElementById("btnSaludo").addEventListener("click", async () => {
     alert("Por favor, ingresa tu nombre.");
     return;
   }
-  const response = await fetch(`/api/greet/${encodeURIComponent(nombre)}`);
+  const response = await fetch(`/greet?name=${encodeURIComponent(nombre)}`);
   const data = await response.json();
   document.getElementById("nombreUsuario").innerText = data.message;
 });
