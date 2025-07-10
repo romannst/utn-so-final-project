@@ -19,7 +19,6 @@ app.post("/students", async (req, res) => {
   const result = await db.query("INSERT INTO students (name) VALUES ($1) RETURNING *", [name]);
   res.json(result.rows[0]);
 });
-//students
 app.get("/api/students", async (req, res) => {
   try {
     const result = await db.query("SELECT * FROM students");
