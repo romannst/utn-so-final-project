@@ -21,13 +21,17 @@ document.getElementById("btnSaludo").addEventListener("click", async () => {
 });
 document.getElementById("btnEstudiante").addEventListener("click", async () => {
   const nombreEstudiante = document.getElementById("nombreEstudiante").value;
+  if (!nombreEstudiante) {
+    alert("Por favor, ingresa el nombre del nuevo estudiante.");
+    return;
+  }
   const response = await fetch("/students", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name: nombreEstudiante }),
   });
   const data = await response.json();
-  document.getElementById("nuevoEstudiante").innerText = `Estudiante agregado: ${data.name} (ID: ${data.id})`;
+  document.getElementById("nuevoEstudiante").innerText = `Estudiante agregado: ${data.name} = ID: ${data.id}`;
   document.getElementById("nombreEstudiante").value = "";
   document.getElementById("loadButton").click();
 });
