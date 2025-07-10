@@ -24,7 +24,7 @@ document.getElementById("btnEstudiante").addEventListener("click", async () => {
   const response = await fetch("/students", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name: nombreEstudiante })
+    body: JSON.stringify({ name: nombreEstudiante }),
   });
   const data = await response.json();
   document.getElementById("nuevoEstudiante").innerText = `Estudiante agregado: ${data.name} (ID: ${data.id})`;
