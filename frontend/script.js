@@ -31,7 +31,7 @@ document.getElementById("btnEstudiante").addEventListener("click", async () => {
     body: JSON.stringify({ name: nombreEstudiante }),
   });
   const data = await response.json();
-  document.getElementById("nuevoEstudiante").innerText = `Estudiante agregado: ${data.name} = ID: ${data.id}`;
+  document.getElementById("nuevoEstudiante").innerText = `Estudiante agregado: ${data.name} - ID: ${data.id}`;
   document.getElementById("nombreEstudiante").value = "";
   document.getElementById("loadButton").click();
 });
